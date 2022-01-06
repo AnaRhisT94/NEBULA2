@@ -278,15 +278,15 @@ class NEBULA_SCENE_DETECTOR():
 def main():
    
     scene_detector = NEBULA_SCENE_DETECTOR()
-    scene_detector.new_movies_batch_processing("/movies", "/home/ilan/storage", "LSMDC")
-    scene_detector.init_new_db("nebula_datadriven")
-    _files = glob.glob('/movies/*avi')
-    #Example usage
-    for _file in _files:
-        file_name = basename(_file)
-        movie_mame = file_name.split(".avi")[0]
-        scene_detector.insert_movie(file_name, movie_mame, ["hollywood", "pegasus", "visual genome"],
-        _file,"static/datadriven/" + file_name, 300)
+    scene_detector.new_movies_batch_processing()
+    #scene_detector.init_new_db("nebula_datadriven")
+    # _files = glob.glob('/movies/*avi')
+    # #Example usage
+    # for _file in _files:
+    #     file_name = basename(_file)
+    #     movie_mame = file_name.split(".avi")[0]
+    #     scene_detector.insert_movie(file_name, movie_mame, ["hollywood", "pegasus", "visual genome"],
+    #     _file,"static/datadriven/" + file_name, 300)
 if __name__ == "__main__":
     main()
 
