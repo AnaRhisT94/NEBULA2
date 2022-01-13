@@ -275,11 +275,13 @@ class NEBULA_SCENE_DETECTOR():
             movies.append((_file, movie_id))
         return(movies)
 
+    
+
 def main():
    
     scene_detector = NEBULA_SCENE_DETECTOR()
-    scene_detector.new_movies_batch_processing()
-    #scene_detector.init_new_db("nebula_datadriven")
+    scene_detector.new_movies_batch_processing("/movies", "/dataset1/storage", "LSMDC")
+    # scene_detector.init_new_db("nebula_datadriven")
     # _files = glob.glob('/movies/*avi')
     # #Example usage
     # for _file in _files:

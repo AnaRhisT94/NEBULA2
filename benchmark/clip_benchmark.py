@@ -59,7 +59,7 @@ class NebulaVideoEvaluation:
         # self.model, self.preprocess = clip.load("ViT-B/32", device=self.device)
         # self.model1, self.preprocess1 = clip.load("RN50", device=self.device)
         # self.model2, self.preprocess2 = clip.load("RN101", device=self.device)
-        self.model, self.preprocess = clip.load("RN50x4", device=self.device)
+        self.model, self.preprocess = clip.load("RN50", device=self.device)
         self.model_res = 640
 
 
